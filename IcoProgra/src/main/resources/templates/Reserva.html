@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Instituto Comercial Copiapó - Reservas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" data-th-href="@{/css/Estilo2.css}">
+    </head>
+    <body>
+        <header class="cabezera">
+            <div class="cabezera-marca">
+                <div class="cabezera-imagens">
+                    <img class="cabezera-logo-img" th:src="@{/img/logo-comercial.png}" alt="alt">
+                </div>
+                <div class="cabezera-logo-texto">
+                    <span class="logo-linea-1">Instituto <span class="acento">Comercial</span></span>
+                    <span class="logo-linea-2">Rivera <span class="acento">Diaz Copiapo</span></span>
+                </div>
+            </div>
+            <div class="cabezera-espacio"></div>
+        </header>
+        <div class="fondo-reserva">
+            <div class="vista-opaca">
+                <div class="etiqueta-reserva">¡¡Reserva ya!!</div>
+                <h1 class="vista-opaca-titulo">Registra tus datos</h1>
+                <div class="mensaje mensaje-exito" th:if="${mensajeExito}" th:text="${mensajeExito}"></div>
+                <div class="mensaje mensaje-error" th:if="${mensajeError}" th:text="${mensajeError}"></div>
+                <form th:action="@{/Reserva}" th:object="${datosReserva}" method="post" class="form-reserva">
+                    <div class="columnas-reserva">
+                        <div class="columna">
+                            <h2 class="columna-titulo">Ingreso de datos</h2>
+                            <!--Nombre estudiante--->
+                            <label class="form-label" for="nombre"> Nombre de Alumno </label>
+                            <input class="form-input" type="text" id="nombre" placeholder="Ej: Pepito Pérez" required minlength="3" maxlength="100" th:field="*{estudiante.nombre}">
+                            <!--Rut--->
+                            <label class="form-label" for="rut"> Rut </label>
+                            <input class="form-input" type="text" id="rut" placeholder="Ej: 12345678-9" required maxlength="12" th:field="*{estudiante.rut}">
+                            <!--Curso--->
+                            <label class="form-label" for="curso"> Curso </label>
+                            <select class="form-input form-select" id="curso" required th:field="*{estudiante.curso}">
+                                <option value="">Selecciona tu curso</option>
+                                <option th:each="c : ${cursos}" th:value="${c}" th:text="${c}"></option>
+                            </select>
+                        </div>
+                        <div class="columna">
+                            <h2 class="columna-titulo">Ingreso de la reserva</h2>
+                            <!--Contenido--->
+                            <label class="form-label" for="contenido"> Contenido </label>
+                            <input class="form-input" type="text" id="contenido" placeholder="Ej: Trabajo en grupo" required minlength="3" maxlength="200" th:field="*{contenido}">
+                            <!--Fecha--->
+                            <label class="form-label" for="fecha"> Fecha </label>
+                            <input class="form-input" type="date" id="fecha" required th:field="*{fecha}">
+                            <!--Hora--->
+                            <label class="form-label" for="hora"> Hora </label>
+                            <input class="form-input" type="time" id="hora" required th:field="*{hora}">
+                        </div>
+                    </div>
+                    <button type="submit" class="form-button">Enviar datos</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Aviso de reserva duplicada (se abre solo si el servicio lanzó EntityExistsException) -->
+        <dialog class="modal-alerta" th:open="${errorDuplicado != null}">
+            <div>
+                <div class="modal-icono">⚠️</div>
+                <h3 class="modal-titulo">Reserva duplicada</h3>
+                <p class="modal-texto" th:text="${errorDuplicado}"></p>
+                <form method="dialog">
+                    <button class="btn-cerrar">Entendido</button>
+                </form>
+            </div>
+        </dialog>
+
+        <footer class="pie">
+            <div class="footer-lema">Somos el futuro que mueve generaciones</div>
+            <div class="footer-inferior">
+                <div class="footer-Redes">
+                    <a class="footer-red" data-th-href="@{https://www.instagram.com/icomercialcopiapoard/}"target="_blank">Instagram</a>
+                    <a class="footer-red" data-th-href="@{https://www.facebook.com/profile.php?id=61551488185212/}"target="_blank">Facebook</a>
+                </div>
+                <div class="footer-creadores">
+                    <div class="footer-creador">Juan León</div>
+                    <div class="footer-creador">Javier Pulgar</div>
+                </div>
+            </div>
+        </footer>
+        
+    </body>
+</html>

@@ -1,0 +1,11 @@
+{
+    "elements": {},
+    "attributes": {
+        "th:hreaf": {
+            "context": "link"
+        },
+        "th:src": {
+            "context": "img"
+        }
+    }
+}

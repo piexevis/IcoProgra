@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Instituto Comercial Copiapó</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" data-th-href="@{/css/Estilo1.css}" href="css/Estilo1.css">
+    </head>
+    <body>
+        <header class="cabezera">
+            <div class="cabezera-marca">
+                <div class="cabezera-imagens">
+                    <img class="cabezera-logo-img" th:src="@{/img/logo-comercial.png}"  alt="alt">
+                </div>
+                <div class="cabezera-logo-texto">
+                    <span class="logo-linea-1">Instituto <span class="acento">Comercial</span></span>
+                    <span class="logo-linea-2">Rivera <span class="acento">Diaz Copiapo</span></span>
+                </div>
+            </div>
+            <div class="cabezera-espacio"></div>
+        </header>
+
+        <div class="hero">
+            <div class="Principal">
+                <p class="principal-lema">Creando espacios seguros, para la lectura, trabajo y el esparcimiento</p>
+            </div>
+            <div class="Contenido">
+                <h1 class="contenido-titulo">Bienvenidos</h1>
+                <p class="contenido-texto">
+                    Tras el daño estructural y la pérdida temporal del espacio de biblioteca, los estudiantes
+                    permanecían hacinados en pasillos o sentados en el suelo durante horas libres o momentos
+                    de trabajo grupal. Desde ahora puedes utilizar nuestra pérgola sustentable, no te quedes
+                    sin tu cupo, reserva tu hora ya.
+                </p>
+                <a class="contenido-link" data-th-href="@{/Reserva}">Reserva ya</a>
+            </div>
+        </div>
+
+        <footer class="pie">
+            <div class="footer-lema">Somos el futuro que mueve generaciones</div>
+            <div class="footer-inferior">
+                <div class="footer-Redes">
+                    <a class="footer-red" th:href="@{https://www.instagram.com/icomercialcopiapoard/}"target="_blank">Instagram</a>
+                    <a class="footer-red" th:href="@{https://www.facebook.com/profile.php?id=61551488185212/}"target="_blank">Facebook</a>
+                </div>
+                <div class="footer-creadores">
+                    <div class="footer-creador">Juan León</div>
+                    <div class="footer-creador">Javier Pulgar</div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

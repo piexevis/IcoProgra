@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #14183A;
+    background: #F7F6F2;
+}
+/* ---------- Cabecera ---------- */
+.cabezera {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #0F1B5C 0%, #1E3FD6 100%);
+    border-bottom: 3px solid #F0A93A;
+    padding: 0.75rem 2rem;
+    position: relative;
+}
+.cabezera-marca {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    padding-right: 1.5rem;
+}
+.cabezera-marca::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.25);
+}
+.cabezera-imagens {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+}
+.cabezera-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.cabezera-logo-texto {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.01em;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+.cabezera-logo-texto .logo-linea-1 {
+    font-size: 1.4rem;
+}
+.cabezera-logo-texto .logo-linea-2 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+.cabezera-logo-texto .acento {
+    color: #F0A93A;
+}
+.cabezera-espacio {
+    flex: 1;
+}
+/* ---------- Fondo  ---------- */
+.fondo-reserva {
+    background-color: #0F1B5C;
+    background-image:
+        linear-gradient(180deg, rgba(15, 27, 92, 0.78) 0%, rgba(15, 27, 92, 0.55) 100%),
+        url('../img/pergola.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    padding: 3.5rem 1.5rem;
+}
+.vista-opaca {
+    background: #ffffff;
+    border-top: 4px solid #F0A93A;
+    border-radius: 6px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    padding: 2.5rem 2.5rem 2rem;
+    width: 100%;
+    max-width: 52rem;
+}
+.etiqueta-reserva {
+    display: inline-block;
+    background: #F0A93A;
+    color: #0F1B5C;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.8rem;
+    border-radius: 3px;
+    margin-bottom: 0.8rem;
+}
+.vista-opaca-titulo {
+    font-family: 'Fraunces', serif;
+    color: #0F1B5C;
+    font-size: 1.9rem;
+    margin: 0 0 1.8rem;
+}
+/* ---------- Columnas del formulario ---------- */
+.columnas-reserva {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+.columna {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+}
+.columna:first-child {
+    border-right: 1px solid rgba(15, 27, 92, 0.12);
+    padding-right: 2.5rem;
+}
+.columna-titulo {
+    font-family: 'Fraunces', serif;
+    color: #1E3FD6;
+    font-size: 1.15rem;
+    margin: 0 0 1rem;
+}
+.form-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #34395c;
+    margin-top: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+.form-input {
+    border: 1px solid rgba(15, 27, 92, 0.2);
+    border-radius: 4px;
+    padding: 0.65rem 0.8rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #14183A;
+    background: #F7F6F2;
+}
+.form-input:focus {
+    outline: none;
+    border-color: #1E3FD6;
+    background: #ffffff;
+}
+.form-fila {
+    display: flex;
+    gap: 0.75rem;
+}
+.form-select {
+    flex: 1;
+    cursor: pointer;
+}
+/* ---------- Botón ---------- */
+.form-button {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+    background: #F0A93A;
+    color: #0F1B5C;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    padding: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.form-button:hover {
+    background: #FBD190;
+    transform: translateY(-2px);
+}
+/* ---------- Pie de página ---------- */
+.pie {
+    background: #0F1B5C;
+    color: #ffffff;
+}
+.footer-lema {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    padding: 1.1rem 1.5rem;
+    border-bottom: 1px solid rgba(240, 169, 58, 0.35);
+}
+.footer-inferior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+}
+.footer-Redes {
+    display: flex;
+    gap: 1.25rem;
+}
+.footer-red {
+    color: #F0A93A;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+.footer-red:hover {
+    color: #FBD190;
+}
+.footer-creadores {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 640px) {
+    .cabezera {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    .cabezera-marca::after {
+        display: none;
+    }
+    .columnas-reserva {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .columna:first-child {
+        border-right: none;
+        border-bottom: 1px solid rgba(15, 27, 92, 0.12);
+        padding-right: 0;
+        padding-bottom: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .footer-inferior {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ---------- Mensajes de confirmación / error ---------- */
+.mensaje {
+    margin: 1rem 0;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.mensaje-exito {
+    background: #DFF5E3;
+    color: #1B5E2B;
+    border-left: 4px solid #2E9E4F;
+}
+.mensaje-error {
+    background: #FBE0E0;
+    color: #8A1C1C;
+    border-left: 4px solid #D33;
+}
+
+/* ---------- Modal de aviso (reserva duplicada) ---------- */
+.modal-alerta {
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 24rem;
+    text-align: center;
+    background: #ffffff;
+    border-top: 4px solid #F0A93A;
+}
+.modal-alerta[open] {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    box-shadow: 0 0 0 100vmax rgba(15, 27, 92, 0.55);
+}
+.modal-icono {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+.modal-titulo {
+    margin: 0;
+    font-family: 'Fraunces', serif;
+    color: #0F1B5C;
+}
+.modal-texto {
+    color: #34395c;
+    line-height: 1.4;
+}
+.btn-cerrar {
+    background: #F0A93A;
+    color: #0F1B5C;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    padding: 0.6rem 1.6rem;
+    cursor: pointer;
+}
+.btn-cerrar:hover {
+    background: #FBD190;
+}
