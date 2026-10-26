@@ -3,7 +3,7 @@
 Aplicación web para que los estudiantes del Instituto Comercial Rivera Díaz (Copiapó) reserven un cupo en la **pérgola sustentable**, el espacio habilitado para lectura, trabajo grupal y esparcimiento tras el daño estructural de la biblioteca.
 
 >  **Estado del proyecto: en desarrollo (no funcional todavía).**
-> Faltan por completar partes del formulario de reserva. Ver la sección [Pendientes](#-pendientes).
+> Faltan por completar partes del formulario de reserva.
 
 ##  ¿Qué problema resuelve?
 
