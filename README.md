@@ -5,11 +5,6 @@ Aplicación web para que los estudiantes del Instituto Comercial Rivera Díaz (C
 >  **Estado del proyecto: en desarrollo (no funcional todavía).**
 > Faltan por completar partes del formulario de reserva. Ver la sección [Pendientes](#-pendientes).
 
-##  Equipo
-
-- Juan León
-- Javier Pulgar
-
 ##  ¿Qué problema resuelve?
 
 Al perderse temporalmente el espacio de la biblioteca, los estudiantes quedaban hacinados en pasillos o sentados en el suelo durante las horas libres o el trabajo grupal. Con esta aplicación pueden reservar su hora en la pérgola y asegurar su cupo.
